@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    document.getElementById("myDiv").textContent = "This text will replace the existing text.";
+    // Correctly accessing the div element's content after modifying textContent
+    let newText = document.getElementById("myDiv").textContent;  
+    alert(newText);
+  </script>
+</body>
+</html>
